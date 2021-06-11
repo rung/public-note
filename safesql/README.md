@@ -58,7 +58,7 @@ var db  *safesql.DB
 - gosec
   - gosecは誤検知や検知漏れが発生する（SQLっぽい文字列連結の検知をする. パターンに当てはまらなかったら検知しない）
 
-#### 静的解析での応用(Google)
+#### Safesqlを静的解析で拡張する(Google)
 - Building Secure and Reliable Systemsで紹介されてる
 - https://github.com/google/go-safeweb にも説明あり
 
