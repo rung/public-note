@@ -13,6 +13,7 @@ db.Query("SELECT ... WHERE size = ?", 10)
 
 - go-safewebに入ってるSafeSQLが面白かった
   - https://github.com/google/go-safeweb/blob/master/safesql/safesql.go
+  - Secure by defaultで、安全な状態を強制する. 間違えなくする
 
 #### 仕組み
 - 別パッケージのunexportedなtype stringConstant
