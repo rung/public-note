@@ -46,8 +46,9 @@ var db  *safesql.DB
 	// SafeSQL (fail/コンパイルエラー)
 	//  Compile時に文字列リテラルであれば、safesql.Newが使えるが、string型を渡す形だと使えない
 	s3fromExternal := safesql.New(os.Getenv("HOGE"))
-	// Runtime Errorでなく、Compile Errorで防げる...!
 ```
+- 外からの入力を防ぐのを、Runtime Errorでなく、Compile Errorで防げる...!
+- コンパイル時に決定できるのであればコンパイルできるし、できないのであればできない
 
 #### SQL Injectionを防ぐ静的解析系ツールとの比較 (うろおぼえ!)
 - stripe/safesql
