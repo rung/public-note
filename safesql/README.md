@@ -15,7 +15,7 @@ db.Query("SELECT ... WHERE size = ?", 10)
   - https://github.com/google/go-safeweb/blob/master/safesql/safesql.go
 
 #### 仕組み
-- 別パッケージのunexportedなtype
+- 別パッケージのunexportedなtype stringConstant
   - New(text stringConstant)は、文字列リテラル("hoge")であれば、呼び出せる
   - string型の変数を渡そうとすると、コンパイル時に弾かれる(unexportedなので型キャストもできない)
     - Runtime Errorでなく、コンパイル時にエラーが出る！
