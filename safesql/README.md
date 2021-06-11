@@ -1,4 +1,5 @@
 ### SafeSQLが面白い
+- Disclaimer: 雑メモだから間違ってるかも
 #### SQL Injectionを防ぎたい
 - 1. 外からの入力をSQL文の組み立てに使わない
 - 2. 外からの入力を渡す場合はPlaceholderを使う
