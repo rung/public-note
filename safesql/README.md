@@ -56,7 +56,7 @@ var db  *safesql.DB
   - safesqlはSSAを用いてdb.queryに入れる文字列を検知して、いい感じだが、別の関数で連結された文字列を、db.queryにわたす場合は検知できない
 
 - gosec
-  - gosecは誤検知が多いという問題（SQLっぽい文字列連結の検知をする. golangci-lintだとデフォルト無効化されてた気がする）
+  - gosecは誤検知や検知漏れが発生する（SQLっぽい文字列連結の検知をする. パターンに当てはまらなかったら検知しない）
 
 #### 静的解析での応用(Google)
 - Building Secure and Reliable Systemsで紹介されてる
