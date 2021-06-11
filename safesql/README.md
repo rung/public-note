@@ -27,6 +27,28 @@ type stringConstant string
 func New(text stringConstant) TrustedSQLString { return TrustedSQLString{string(text)} }
 ```
 
+#### 使い方
+- https://github.com/rung/public-note/blob/main/safesql/main.go
+```go
+// database/sqlのwrapper
+var db  *safesql.DB
+---
+	// SafeSQLを用いた呼び出し (pass/コンパイルできる)
+	age := 1
+	db.Query(safesql.New("SELECT hoge FROM hoge WHERE age = ?"), age)
+
+	// SafeSQL (連結) (pass/コンパイルできる)
+	s1 := safesql.New("SELECT hoge")
+	s2 := safesql.New(" FROM hoge WHERE age = ?")
+
+	db.Query(safesql.TrustedSQLStringConcat(s1, s2), age)
+
+	// SafeSQL (fail/コンパイルエラー)
+	//  Compile時に文字列リテラルであれば、safesql.Newが使えるが、string型を渡す形だと使えない
+	s3fromExternal := safesql.New(os.Getenv("HOGE"))
+	// Runtime Errorでなく、Compile Errorで防げる...!
+```
+
 #### SQL Injectionを防ぐ静的解析系ツールとの比較 (うろおぼえ!)
 - stripe/safesql
   - 基本的にはdb.queryに入る文字列の連結を防ぐアプローチ
