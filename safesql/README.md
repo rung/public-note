@@ -51,12 +51,12 @@ var db  *safesql.DB
 - コンパイル時に決定できるのであればコンパイルできるし、できないのであればできない
 
 #### SQL Injectionを防ぐ静的解析系ツールとの比較 (うろおぼえ!)
-- stripe/safesql
+- [stripe/safesql](https://github.com/stripe/safesql)
   - 基本的にはdb.queryに入る文字列の連結を防ぐアプローチ
   - safesqlはSSAを用いてdb.queryに入れる文字列を検知して、いい感じだが、別の関数で連結された文字列を、db.queryにわたす場合は検知できない
 
 - gosec
-  - gosecは誤検知や検知漏れが発生する（SQLっぽい文字列連結の検知をする. パターンに当てはまらなかったら検知しない）
+  - gosecは誤検知や検知漏れが発生する（[SQLっぽい文字列連結の検知をする](https://github.com/securego/gosec/blob/e3dffd64501211e83308009841047d9c8c4964d2/rules/sql.go#L128). パターンに当てはまらなかったら検知しない）
 
 #### Safesqlを静的解析で拡張する(Google)
 - Building Secure and Reliable Systemsで紹介されてる
