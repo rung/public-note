@@ -1,4 +1,4 @@
-### SafeSQLが面白い Jun 13, 2021
+### SafeSQLが面白い Jun 11, 2021
 - Disclaimer: 雑メモだから間違ってるかも
 #### SQL Injectionを防ぎたい
 - 1. 外からの入力をSQL文の組み立てに使わない
