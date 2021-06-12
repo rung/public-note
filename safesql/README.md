@@ -74,7 +74,7 @@ var db  *safesql.DB
   - In our experience, as long as the feedback cycle is quick, and fixing each pattern is relatively easy, developers embrace inherently safe APIs much more readily—even when we can’t prove that their code was insecure, or when they do a good job of writing secure code using the unsafe APIs. Our experience contrasts with existing research literature, which focuses on reducing the false-positive and false-negative rates
     - (拙訳) 私たちの経験上、フィードバックサイクルが早く、修正が比較的簡単であれば、開発者は安全性が保証されているAPIを進んで受け入れます - もし開発者が安全でないコードを書いていると証明出来ない場合でも、彼らが安全性が保証されていないAPIを使って上手くセキュアコーディングを行えるのだとしても。 この私たちの経験は、過検知と検知漏れ率を下げていくということにフォーカスする、既存の研究とは対照的です。
   - To handle complicated use cases, at Google we allow a way to bypass the type restrictions with approval from a security engineer. For example, our database API has a separate package, unsafequery, that exports a distinct unsafequery.String type, which can be constructed from arbitrary strings and appended to SQL queries. Only a small fraction of our queries use the unchecked APIs.
-    - (拙訳) 複雑なユースケースを扱うために、Googleでは、セキュリティエンジニアの承認によって型の制限をバイパスすることを認めています。たとえば、私たちのデータベースAPIは他のパッケージを持っています。unsafequeryパッケージは、任意の文字列から構成してをSQLクエリに追記することのできる、unsafequery.String型をエクスポートしています。
+    - (拙訳) 複雑なユースケースを扱うために、Googleでは、セキュリティエンジニアの承認によって型の制限をバイパスすることを認めています。たとえば、私たちのデータベースAPIは他のパッケージを持っています。unsafequeryパッケージは、任意の文字列から構成してSQLクエリに追記することのできる、unsafequery.String型をエクスポートしています。
 
 - [go-safeweb](https://github.com/google/go-safeweb) のSecurityの考え方も勉強になる
   - Secure-by-default
