@@ -68,7 +68,7 @@ var db  *safesql.DB
     - 危ないことをさせるときは、危ないことが分かるようにする
       - GoのUnsafeも同じような話
 
-- [Bulding Secure and Reliable Systems](https://sre.google/books/building-secure-reliable-systems/) (Google SRE本) "Chapter 12. Writing Code" からの引用
+- [Bulding Secure and Reliable Systems](https://sre.google/books/building-secure-reliable-systems/) (Google SRE本3冊目) "Chapter 12. Writing Code" からの引用
   - In theory, you can create secure and reliable software by carefully writing application code that maintains these invariants. However, as the number of desired properties and the size of the codebase grows, this approach becomes almost impossible. It’s unreasonable to expect any developer to be an expert in all these subjects, or to constantly maintain vigilance when writing or reviewing code.
     - (拙訳) 理論的には、アプリケーションがセキュアで信頼性があるような不変条件を維持しつつ注意深くコードを書くことで、セキュアで信頼性のあるソフトウェアを作ることができます。 しかし、そのために望まれる要素の数や、コードベースの増加とともに、このアプローチはほとんど不可能になります。全ての開発者がこれらの話についてエキスパートであったり、コードを書いたりレビューするたびに注意を払うというのは、非合理的な想定なのです。
   - In our experience, as long as the feedback cycle is quick, and fixing each pattern is relatively easy, developers embrace inherently safe APIs much more readily—even when we can’t prove that their code was insecure, or when they do a good job of writing secure code using the unsafe APIs. Our experience contrasts with existing research literature, which focuses on reducing the false-positive and false-negative rates
