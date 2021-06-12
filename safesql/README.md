@@ -59,7 +59,7 @@ var db  *safesql.DB
   - gosecは誤検知や検知漏れが発生する（[SQLっぽい文字列連結の検知をする](https://github.com/securego/gosec/blob/e3dffd64501211e83308009841047d9c8c4964d2/rules/sql.go#L128). パターンに当てはまらなかったら検知しない）
 
 #### Safesqlを静的解析で拡張する(Google)
-- Building Secure and Reliable Systemsで紹介されてる
+- [Bulding Secure and Reliable Systems](https://sre.google/books/building-secure-reliable-systems/) で紹介されてる
 - https://github.com/google/go-safeweb にも説明あり
 
 - アプローチ
@@ -79,7 +79,9 @@ var db  *safesql.DB
 - [go-safeweb](https://github.com/google/go-safeweb) のSecurityの考え方も勉強になる
   - Secure-by-default
   - Unsafe Usage is Easy to Review, Track and Restrict
+    - (拙訳) Unsafeの利用はレビューもトラッキングも制限も簡単
   - Designed for Evolving Security Requirements
+    - (拙訳) 発展的なセキュリティ要件をデザイン
   - High Compatibility with Go’s Standard Library and Existing Open-Source Frameworks
-  - 
+    - (拙訳) Goの標準パッケージおよび既存のオープンソースフレームワークとの高い互換性
   
