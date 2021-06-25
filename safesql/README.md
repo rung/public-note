@@ -8,7 +8,7 @@ db.Query("SELECT ... WHERE size = ?", 10)
 ```
 
 #### SafeSQL が面白い
-- GoogleはSacure by defaultの考え方で作られたライブラリを公開している
+- GoogleはSecure by defaultの考え方で作られたライブラリを公開している
   - https://github.com/google/go-safeweb
   - https://github.com/google/tink
 
