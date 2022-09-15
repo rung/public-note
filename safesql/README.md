@@ -1,5 +1,4 @@
 ### SafeSQLが面白い Jun 11, 2021
-- Disclaimer: 雑メモだから間違ってるかも
 #### SQL Injectionを防ぎたい
 - 1. 外からの入力をSQL文の組み立てに使わない
 - 2. 外からの入力を渡す場合はPlaceholderを使う
@@ -15,6 +14,7 @@ db.Query("SELECT ... WHERE size = ?", 10)
 - go-safewebに入ってるSafeSQLが面白かった
   - https://github.com/google/go-safeweb/blob/master/safesql/safesql.go
   - Secure by defaultで、安全な状態を強制する. 間違えなくする
+  - [SRE Book3 "building secure and reliable systems"](https://static.googleusercontent.com/media/sre.google/en//static/pdf/building_secure_and_reliable_systems.pdf)でも"TrustedSqlString"として紹介されている
 
 #### 仕組み
 - 別パッケージのunexportedなtype stringConstant
